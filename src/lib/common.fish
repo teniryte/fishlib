@@ -1,0 +1,33 @@
+function portPid -a port;
+  #bash -c "sudo netstat -tulnp | grep ':$port' | awk 'NR==1 {print $7}' | cut -d'/' -f1";
+  sudo netstat -tulnp | grep ":$port" | awk 'NR==1 {print $7}' | cut -d'/' -f1;
+end;
+
+function killPort -a port;
+  set pid (portPid $port);
+  if test "$pid" = ''; else; sudo kill $pid; end;
+  set pid (portPid $port);
+  if test "$pid" = ''; else; sudo kill $pid; end;
+  set pid (portPid $port);
+  if test "$pid" = ''; else; sudo kill $pid; end;
+  set pid (portPid $port);
+  if test "$pid" = ''; else; sudo kill $pid; end;
+  set pid (portPid $port);
+  if test "$pid" = ''; else; sudo kill $pid; end;
+  set pid (portPid $port);
+  if test "$pid" = ''; else; sudo kill $pid; end;
+  set pid (portPid $port);
+  if test "$pid" = ''; else; sudo kill $pid; end;
+  set pid (portPid $port);
+  if test "$pid" = ''; else; sudo kill $pid; end;
+  set pid (portPid $port);
+  if test "$pid" = ''; else; sudo kill $pid; end;
+  set pid (portPid $port);
+  if test "$pid" = ''; else; sudo kill $pid; end;
+  set pid (portPid $port);
+  if test "$pid" = ''; else; sudo kill $pid; end;
+end;
+
+function port -a portNumber;
+    sudo lsof -i:$portNumber;
+end;
