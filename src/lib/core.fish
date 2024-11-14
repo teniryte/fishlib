@@ -2,8 +2,8 @@ set workDir "$HOME/work";
 set tmpDir $workDir/tmp;
 set tmpDownloadedDir "$tmpDir/.downloaded";
 
-set storeUrl 'https://store.flaux.ru';
-set fishUrl "$storeUrl/shell/fish";
+set storeUrl 'https://raw.githubusercontent.com/teniryte/fishlib/refs/heads/main/src';
+set fishUrl "$storeUrl";
 set runScopes 'script' 'lib';
 
 function makeDir -a dirname option;
