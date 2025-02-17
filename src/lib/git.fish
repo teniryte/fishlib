@@ -143,13 +143,20 @@ function checkout -a name;
   git checkout $argv;
 end;
 
+function ck;
+  set argsCount (count $argv);
+  if test "$argsCount" = '0';
+    br;
+  else;
+    git checkout $argv;
+  end;
+end;
+
 alias pu 'git pull';
 
 alias re 'git rebase';
 
 alias rmb 'br -d -f';
-
-alias ck 'checkout';
 
 alias br 'git branch';
 
