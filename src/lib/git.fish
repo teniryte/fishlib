@@ -15,7 +15,7 @@ function nbt -a name;
   git checkout (getMainGitBranch);
   git branch -D $current;
   git pull;
-  git checkout -- test;
+  git checkout test --;
   git pull;
   git checkout -b $name;
 end;
