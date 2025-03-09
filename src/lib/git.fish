@@ -4,7 +4,7 @@ end;
 
 function nb -a name;
   set current (git branch --show-current);
-  git checkout master;
+  git checkout (getMainGitBranch);
   git branch -D $current;
   git pull;
   git checkout -b $name;
@@ -12,7 +12,7 @@ end;
 
 function nbt -a name;
   set current (git branch --show-current);
-  git checkout master;
+  git checkout (getMainGitBranch);
   git branch -D $current;
   git pull;
   git checkout -- test;
@@ -161,3 +161,15 @@ alias rmb 'br -d -f';
 alias br 'git branch';
 
 alias c com;
+
+function getMainGitBranch
+    # Проверяем, существует ли ветка master
+    if git show-ref --quiet refs/heads/master
+        echo "master"
+    # Если ветки master нет, проверяем ветку main
+    else if git show-ref --quiet refs/heads/main
+        echo "main"
+    else
+        echo "Ни master, ни main не найдены"
+    end
+end
