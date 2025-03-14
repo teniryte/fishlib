@@ -22,9 +22,7 @@ function d;
   yarn start;
 end;
 
-function pg;
-  psql -d leaderport;
-end;
+
 
 function r;
   set name (basename (pwd));
