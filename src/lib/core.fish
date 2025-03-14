@@ -105,3 +105,4 @@ end;
 run lib tmp;
 run lib common;
 run lib git;
+run lib db;
