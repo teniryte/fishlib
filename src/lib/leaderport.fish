@@ -1,25 +1,29 @@
 function b;
-  cd $HOME/projects/leaderport/back;
-  killPort 9001;
+  cd $HOME/work/leaderport/back;
+  # killPort 9001;
   yarn start:dev;
 end;
 
 function f;
-  cd $HOME/projects/leaderport/front;
-  killPort 9002;
+  cd $HOME/work/leaderport/front;
+  # killPort 9002;
   yarn dev;
 end;
 
 function a;
-  cd $HOME/projects/leaderport/admin;
-  killPort 9003;
+  cd $HOME/work/leaderport/admin;
+  # killPort 9003;
   yarn dev;
 end;
 
 function d;
-  cd $HOME/projects/leaderport/dashboard;
-  killPort 9005;
+  cd $HOME/work/leaderport/dashboard;
+  # killPort 9005;
   yarn start;
+end;
+
+function f2;
+  cd $HOME/work/leaderport/front-v2;
 end;
 
 
