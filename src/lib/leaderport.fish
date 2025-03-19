@@ -26,6 +26,10 @@ function f2;
   cd $HOME/work/leaderport/front-v2;
 end;
 
+function a2;
+  cd $HOME/work/leaderport/admin2;
+end;
+
 
 
 function r;
