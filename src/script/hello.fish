@@ -1,1 +1,1 @@
-echo "> fishlib v0.0.21"
+echo "> fishlib v0.0.22"
